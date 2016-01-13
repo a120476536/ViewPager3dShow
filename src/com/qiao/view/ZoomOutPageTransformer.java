@@ -23,9 +23,9 @@ public class ZoomOutPageTransformer implements ViewPager.PageTransformer
 		{ // [-Infinity,-1)
 			// This page is way off-screen to the left.
 //			view.setBackgroundColor(Color.parseColor("#333333"));
-			view.setAlpha(50);
+			view.setAlpha(0.25f);
 
-		} else if (position <= 1) //a页滑动至b�? �? a页从 0.0 -1 ；b页从1 ~ 0.0
+		} else if (position <= 1) //aé¡µæ»‘åŠ¨è‡³bé¡? ï¼? aé¡µä»Ž 0.0 -1 ï¼›bé¡µä»Ž1 ~ 0.0
 		{ // [-1,1]
 			// Modify the default slide transition to shrink the page as well
 			float scaleFactor = Math.max(MIN_SCALE, 1 - Math.abs(position));
@@ -51,7 +51,7 @@ public class ZoomOutPageTransformer implements ViewPager.PageTransformer
 		{ // (1,+Infinity]
 			// This page is way off-screen to the right.
 //			view.setBackgroundColor(Color.parseColor("#333333"));
-			view.setAlpha(50);
+			view.setAlpha(0.25f);
 		}
 	}
 }
