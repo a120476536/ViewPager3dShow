@@ -1,0 +1,42 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal" >
+
+    <RelativeLayout
+        android:id="@+id/pager_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipChildren="false"  
+        android:gravity="center_horizontal"  
+        android:layerType="software" 
+        android:background="@android:color/white" 
+         >
+
+        <com.qiao.view.ViewPagerCompat
+            android:id="@+id/id_viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+             android:layout_marginLeft="110dp"  
+             android:layout_marginRight="110dp"  
+            android:clipChildren="false" 
+            android:background="@android:color/white" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/id_viewpager"
+            android:orientation="vertical" >
+            <TextView 
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="这里根据滑动界面动态设置任意数据"
+                android:textColor="@android:color/black"/>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>
